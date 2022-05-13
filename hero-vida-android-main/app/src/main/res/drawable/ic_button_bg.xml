@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/colorRegisterButtonPrimary" />
+    <corners android:radius="@dimen/_24sdp" />
+</shape>
+
+
+
+<!--<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="328dp"
+    android:height="51dp"
+    android:viewportWidth="328"
+    android:viewportHeight="51">
+    <path android:pathData="M0,4C0,1.791 1.791,0 4,0H324C326.209,0 328,1.791 328,4V46C328,48.209 326.209,50 324,50H4C1.791,50 0,48.209 0,46V4Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:endX="328"
+                android:endY="25"
+                android:startX="0"
+                android:startY="25"
+                android:type="linear">
+                <item
+                    android:color="#00EDFF"
+                    android:offset="0" />
+                <item
+                    android:color="#00EDFF"
+                    android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>-->

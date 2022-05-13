@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_main_bg"
+    tools:context=".ui.register.OTPActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_16sdp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgLogoBlackOTP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_vida_logo_black" />
+
+        <TextView
+            android:id="@+id/tv_verifyOTP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgLogoBlackOTP"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Verify OTP"
+            android:textColor="@color/colorNero"
+            android:textSize="@dimen/_18sdp" />
+
+        <LinearLayout
+            android:id="@+id/ll_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_verifyOTP"
+            android:layout_marginTop="@dimen/_26sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Enter 4 digit OTP sent to "
+                android:textColor="@color/colorDarkGray"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/tv_register_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="+91 99999 22222"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp" />
+
+            <ImageView
+                android:id="@+id/img_editNumber"
+                android:layout_width="@dimen/_34sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_edit_number"
+                app:tint="@color/colorkilometer" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_number"
+            android:layout_marginTop="@dimen/_6sdp">
+
+            <EditText
+                android:id="@+id/et_first_digit"
+                style="@style/mediumTextStyle"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/radius_bg"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:includeFontPadding="false"
+                android:inputType="number"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:textSize="@dimen/_14sdp" />
+
+            <EditText
+                android:id="@+id/et_second_digit"
+                style="@style/mediumTextStyle"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toEndOf="@id/et_first_digit"
+                android:background="@drawable/radius_bg"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:includeFontPadding="false"
+                android:inputType="number"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:textSize="@dimen/_14sdp" />
+
+            <EditText
+                android:id="@+id/et_third_digit"
+                style="@style/mediumTextStyle"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toEndOf="@id/et_second_digit"
+                android:background="@drawable/radius_bg"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:includeFontPadding="false"
+                android:inputType="number"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:textSize="@dimen/_14sdp" />
+
+            <EditText
+                android:id="@+id/et_fourth_digit"
+                style="@style/mediumTextStyle"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_toEndOf="@id/et_third_digit"
+                android:background="@drawable/radius_bg"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:inputType="number"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:textSize="@dimen/_14sdp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_resendOTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_field"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_resendOTPText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Resend OTP in "
+                android:textColor="@color/colorResendOTP"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/tv_resendOTP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/resend_otp"
+                android:textColor="@color/colorSolidHover"
+                android:textSize="@dimen/_11sdp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_remainingTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/tv_resendOTPText"
+                android:fontFamily="@font/poppins_medium"
+                android:text="28 sec"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11sdp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_verify"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_46sdp"
+            android:layout_below="@id/ll_resendOTP"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_26sdp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/button_unselect_bg"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:stateListAnimator="@null"
+            android:text="Verify"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_14sdp" />
+
+        <LinearLayout
+            android:id="@+id/llHavingTrouble"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_verify"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_26sdp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Having Trouble? Call "
+                android:textColor="@color/colorNero"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="1800 235 5672"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_11sdp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_otpInvalid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_field"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Entered OTP is incorrect, please try again! "
+            android:textColor="@color/colorOTPErrror"
+            android:textSize="@dimen/_11sdp"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/llNewRegisterNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imgVidaBlackBottom"
+            android:layout_marginBottom="@dimen/_18sdp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:text="New to VIDA?"
+                android:textColor="@color/colorNero"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:text="Register Now"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_11sdp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgVidaBlackBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_vida_logo_black" />
+    </RelativeLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

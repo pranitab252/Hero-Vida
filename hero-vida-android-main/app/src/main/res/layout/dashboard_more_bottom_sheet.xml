@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomShow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorDashboard"
+    android:orientation="vertical"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="@dimen/_72sdp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <ImageView
+        android:id="@+id/imgMainSlide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="slide up"
+        app:srcCompat="@drawable/ic_rectangle_quick" />
+
+    <LinearLayout
+        android:id="@+id/llButtonsSolid"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_56sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="@drawable/dashboard_menu_options_bg_gradient"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/rlKeySolid"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginStart="@dimen/_32sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/dashboard_menu_options_bg"
+            android:backgroundTint="@color/colorWhite10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_unlock" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlScooterSideSolid"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/dashboard_menu_options_bg"
+            android:backgroundTint="@color/colorWhite10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_key" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlMotorSolid"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/dashboard_menu_options_bg"
+            android:backgroundTint="@color/colorWhite10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_sctooer_open_seat" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlNavigationSolid"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/dashboard_menu_options_bg"
+            android:backgroundTint="@color/colorWhite10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_navigation" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlMoreSolid"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginEnd="@dimen/_32sdp"
+            android:background="@drawable/dashboard_menu_options_bg"
+            android:backgroundTint="@color/colorWhite10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_menu_home" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlScooterMoreDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rlHeaderChargingDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_48sdp">
+
+            <RelativeLayout
+                android:id="@+id/rl_battery"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp">
+
+                <TextView
+                    android:id="@+id/tv_battery"
+                    style="@style/mediumTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:text="91%"
+                    android:textColor="@color/colorNero"
+                    android:textSize="@dimen/_14sdp"
+                    app:drawableEndCompat="@drawable/ic_battery" />
+
+                <TextView
+                    android:id="@+id/tv_distance"
+                    style="@style/mediumTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/tv_battery"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:text="78 km"
+                    android:textColor="@color/colorNero"
+                    android:textSize="@dimen/_14sdp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_below="@id/rl_battery">
+
+                <ImageView
+                    android:id="@+id/imgBluetooth"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_minus4sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    app:srcCompat="@drawable/ic_bluetooth" />
+
+                <TextView
+                    android:id="@+id/tv_bluetooth"
+                    style="@style/regularTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/imgBluetooth"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:text="@string/tv_connected"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/_10sdp" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:layout_toEndOf="@id/tv_bluetooth"
+                    android:background="#DFDDDD" />
+
+                <ImageView
+                    android:id="@+id/imgLocked"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:layout_toEndOf="@+id/divider"
+                    app:srcCompat="@drawable/ic_locked" />
+
+                <TextView
+                    android:id="@+id/tv_locked"
+                    style="@style/regularTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/imgLocked"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:text="@string/tv_locked"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/_10sdp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlHeaderChargingDetail"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:background="@drawable/radius_bg"
+            android:backgroundTint="@color/colorWhite"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_76sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rlKey"
+                    android:layout_width="@dimen/_36sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:background="@drawable/dashboard_menu_options_bg"
+                    android:backgroundTint="@color/colorRegisterButtonPrimary">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_unlock" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlScooterSide"
+                    android:layout_width="@dimen/_36sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:background="@drawable/dashboard_menu_options_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_key" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlMotor"
+                    android:layout_width="@dimen/_36sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:background="@drawable/dashboard_menu_options_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_sctooer_open_seat" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlNavigation"
+                    android:layout_width="@dimen/_36sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:background="@drawable/dashboard_menu_options_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_navigation" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlMore"
+                    android:layout_width="@dimen/_36sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginEnd="@dimen/_24sdp"
+                    android:background="@drawable/dashboard_menu_options_bg">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_menu_home" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llQuickControlOptions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgQuickSlide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/ic_rectangle_quick" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/poppins_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/quick_controls"
+                        android:textColor="@color/colorNero"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_toLeftOf="@+id/tvCustomise"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_icon_setting" />
+
+                    <TextView
+                        android:id="@+id/tvCustomise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/poppins_medium"
+                        android:includeFontPadding="false"
+                        android:text="@string/customise"
+                        android:textColor="@color/colorLightRed"
+                        android:textSize="@dimen/_10sdp" />
+                </RelativeLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rlChargingPoing"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_46sdp"
+                            android:layout_marginTop="@dimen/_18sdp"
+                            android:background="@drawable/quick_control_state">
+
+                            <ImageView
+                                android:id="@+id/imgCharging"
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_17sdp"
+                                app:srcCompat="@drawable/ic_pump" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_toEndOf="@id/imgCharging"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="@string/charging_point"
+                                android:textColor="@color/colorNero"
+                                android:textSize="@dimen/_12sdp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlRemoteImmobilization"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_46sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/quick_control_state">
+
+                            <ImageView
+                                android:id="@+id/imgRemote"
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_17sdp"
+                                app:srcCompat="@drawable/ic_remote" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_toEndOf="@id/imgRemote"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="@string/remote_immobilization"
+                                android:textColor="@color/colorNero"
+                                android:textSize="@dimen/_12sdp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlShareScooterLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_46sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/quick_control_state">
+
+                            <ImageView
+                                android:id="@+id/imgShare"
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_17sdp"
+                                app:srcCompat="@drawable/ic_share" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_toEndOf="@id/imgShare"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="@string/share_scooter_location"
+                                android:textColor="@color/colorNero"
+                                android:textSize="@dimen/_12sdp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlPingDashboard"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_46sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/quick_control_state">
+
+                            <ImageView
+                                android:id="@+id/imgPing"
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_17sdp"
+                                app:srcCompat="@drawable/ic_ping_scooter" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_toEndOf="@id/imgPing"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="@string/ping_my_scooter"
+                                android:textColor="@color/colorNero"
+                                android:textSize="@dimen/_12sdp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlLiveTrack"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_46sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/quick_control_state">
+
+                            <ImageView
+                                android:id="@+id/imgLive"
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_17sdp"
+                                app:srcCompat="@drawable/ic_live_tracking" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_toEndOf="@id/imgLive"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="@string/live_tracking"
+                                android:textColor="@color/colorNero"
+                                android:textSize="@dimen/_12sdp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_46sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:background="@drawable/quick_control_state">
+
+                            <ImageView
+                                android:id="@+id/imgGeo"
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="@dimen/_17sdp"
+                                android:layout_marginTop="20dp"
+                                app:srcCompat="@drawable/ic_geoface" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_toEndOf="@id/imgGeo"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="@string/geofence"
+                                android:textColor="@color/colorNero"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_14sdp"
+                                android:scaleX="1.3"
+                                android:scaleY="1.3"
+                                android:thumb="@drawable/thumb_selector"
+                                app:track="@drawable/track_selector" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/_132sdp"
+            android:layout_height="@dimen/_108sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:src="@drawable/bike_white_dashboard" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_near_charging"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:background="@drawable/radius_bg"
+                android:backgroundTint="@color/colorWhite"
+                android:paddingHorizontal="@dimen/_18sdp">
+
+                <TextView
+                    android:id="@+id/tv_tips"
+                    style="@style/mediumTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:includeFontPadding="false"
+                    android:text="@string/tv_tips"
+                    android:textColor="@color/colorNero"
+                    android:textSize="@dimen/_14sdp"
+                    app:drawableStartCompat="@drawable/ic_blue_tips" />
+
+                <TextView
+                    android:id="@+id/tv_navigate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_tips"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:text="@string/tv_navigate_to_nearby_charging_point"
+                    android:textColor="@color/colorNero"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_navigate_des"
+                    style="@style/regularTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_navigate"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_18sdp"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:text="@string/tv_you_will_need_a_charging_stop_to_reach_home"
+                    android:textColor="@color/color4DigitPin"
+                    android:textSize="@dimen/_12sdp" />
+
+                <ImageView
+                    android:id="@+id/iv_near_charging"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_below="@id/tv_tips"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_charging_point" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_schedule_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_near_charging"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/radius_bg"
+                android:backgroundTint="@color/colorWhite"
+                android:paddingHorizontal="@dimen/_18sdp">
+
+                <TextView
+                    android:id="@+id/tv_schedule_service"
+                    style="@style/mediumTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:text="@string/tv_schedule_service"
+                    android:textColor="@color/colorNero"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    style="@style/regularTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_schedule_service"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:text="24 Jan 2022"
+                    android:textColor="@color/color4DigitPin"
+                    android:textSize="@dimen/_11sdp"
+                    app:drawableStartCompat="@drawable/ic_date"
+                    app:drawableTint="@color/color4DigitPin" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    style="@style/regularTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_date"
+                    android:layout_marginBottom="@dimen/_18sdp"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:text="10:00 am - 11:00 am"
+                    android:textColor="@color/color4DigitPin"
+                    android:textSize="@dimen/_11sdp"
+                    app:drawableStartCompat="@drawable/ic_time"
+                    app:drawableTint="@color/color4DigitPin" />
+
+                <ImageView
+                    android:id="@+id/iv_schedule"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_schedule_service" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_style_your_scooter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_schedule_service"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/radius_bg"
+                android:backgroundTint="@color/colorWhite"
+                android:paddingHorizontal="@dimen/_18sdp">
+
+                <TextView
+                    android:id="@+id/tv_style_your_scooter"
+                    style="@style/mediumTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_toStartOf="@+id/iv_style_scooter"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:text="@string/tv_style_your_scooter"
+                    android:textColor="@color/colorNero"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_style_des"
+                    style="@style/regularTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_style_your_scooter"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_18sdp"
+                    android:layout_toStartOf="@+id/iv_style_scooter"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:text="@string/tv_style_your_scooter_with_the_configurator"
+                    android:textColor="@color/color4DigitPin"
+                    android:textSize="@dimen/_12sdp" />
+
+                <ImageView
+                    android:id="@+id/iv_style_scooter"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_style_scooter" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

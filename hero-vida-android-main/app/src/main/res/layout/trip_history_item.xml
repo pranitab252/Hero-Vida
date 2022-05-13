@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/trip_view_pager_bg"
+    android:layout_marginTop="@dimen/_16sdp"
+    android:backgroundTint="@color/colorWhite"
+    android:layout_marginHorizontal="@dimen/_16sdp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp">
+
+        <TextView
+            android:id="@+id/tvTripKm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:text="2.4 km"
+            android:textColor="@color/colorNero"
+            android:textSize="@dimen/_12sdp" />
+
+        <View
+            android:id="@+id/vTripDot"
+            android:layout_width="@dimen/_4sdp"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_toEndOf="@+id/tvTripKm"
+            android:background="@drawable/trip_view_pager_bg"
+            android:backgroundTint="@color/colorNero" />
+
+        <TextView
+            android:id="@+id/tvTripMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/vTripDot"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:text="26 mins"
+            android:textColor="@color/colorNero"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tvTripTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:text="17 Apr 2021, 1:30 PM"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/_10sdp" />
+
+        <LinearLayout
+            android:id="@+id/llTripLocationDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTripTime"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_location_ongoing_trip" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tvPickLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_minus2sdp"
+                    android:background="@null"
+                    android:fontFamily="@font/poppins_medium"
+                    android:gravity="top"
+                    android:includeFontPadding="false"
+                    android:text="Dwaraka, Gandhi Nagar, Mumbai"
+                    android:textColor="@color/colorNero"
+                    android:textSize="@dimen/_12sdp" />
+
+
+                <TextView
+                    android:id="@+id/tvDropLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_minus2sdp"
+                    android:background="@null"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="bottom"
+                    android:includeFontPadding="false"
+                    android:text="SV Road, Andheri West"
+                    android:textColor="@color/colorNero"
+                    android:textSize="@dimen/_12sdp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

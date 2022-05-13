@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.vida">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- usesCleartextTraffic=true : for Otc Sdk -->
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Vida">
+        <activity
+            android:name=".ui.dashboard.ChargingPointDirectionActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.ChargingPointActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.CustomWidgetActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.ManageSubscriptionConfirmActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.ManageSubscriptionActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.ScooterInformationActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.MyGarbageScooterDetailActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.DiagnosisProgressActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.L1AlertActivity"
+            android:theme="@style/OnBoardingTheme"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dashboard.ChangeSecurityPinActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.SecuritySettingActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.MyGarbageActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.BatteryActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.DiagnosticReportDetailActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.DiagnosticReportActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.PingMyScooterActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+
+        <activity
+            android:name=".ui.otc.LoginOtcActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+
+        <activity
+            android:name=".ui.dashboard.PingMyScooterMapActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.NotificationsActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.AllContentActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.PanicAlertActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.NotificationSettingsActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.LiveTripTrackActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.dashboard.TripDetailActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.quickcontrol.ExitNavigationActivity"
+            android:exported="false"
+            android:theme="@style/DetailTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.quickcontrol.MapNavigationSetActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/DetailTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.intro.OnBoardingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/OnBoardingTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.landing.LandingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/OnBoardingTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.register.ScooterDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DetailTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.register.AddScooterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DetailTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.personaldetail.PersonalDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DetailTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.register.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DetailTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.register.OTPActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DetailTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.register.PinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DetailTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.dashboard.DashboardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DetailTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.personaldetail.ImagePreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DetailTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.register.SecurityPinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DetailTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.quickcontrol.RemoteImmobilizationConfirmActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/DetailTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.quickcontrol.RemoteImmobilizationActivity"
+            android:exported="true"
+            android:label="@string/title_activity_maps"
+            android:theme="@style/DetailTheme" />
+        <activity
+            android:name=".ui.quickcontrol.MapNavigationActivity"
+            android:exported="true"
+            android:label="@string/title_activity_maps"
+            android:theme="@style/DetailTheme" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+    </application>
+
+</manifest>

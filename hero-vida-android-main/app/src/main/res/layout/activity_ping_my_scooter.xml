@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.dashboard.PingMyScooterActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_56sdp">
+
+        <ImageView
+            android:id="@+id/imgBackArrow"
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_56sdp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_20sdp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_minus8sdp"
+            android:layout_toEndOf="@id/imgBackArrow"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:text="Ping my Scooter"
+            android:textColor="@color/colorNero"
+            android:textSize="@dimen/_16sdp" />
+    </RelativeLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lAnimationPing"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_220sdp"
+        android:layout_below="@+id/rlHeader"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ping" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlHeader"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_22sdp"
+        android:src="@drawable/bike_white_ping" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tvStartPing"
+        android:layout_marginBottom="@dimen/_34sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.example.vida.common.DonutProgress
+                android:id="@+id/dpPing"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:visibility="gone"
+                app:donut_circle_starting_degree="270"
+                app:donut_finished_color="@color/colorUnSelectSeek"
+                app:donut_finished_stroke_width="@dimen/_4sdp"
+                app:donut_max="10"
+                app:donut_progress="10"
+                app:donut_text_color="@color/colorNero"
+                app:donut_text_size="@dimen/_18sdp"
+                app:donut_unfinished_color="@color/colorRegisterButtonPrimary"
+                app:donut_unfinished_stroke_width="@dimen/_4sdp" />
+
+            <TextView
+                android:id="@+id/tvFindYourScooter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/find_your_scooter_using_the_scooter_flash_lights_and_horn"
+                android:textColor="@color/colorDarkGray"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tvControlsPing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlTimer"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_regular"
+            android:includeFontPadding="false"
+            android:text="Controls"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_10sdp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvControlsPing"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/rlSun"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_46sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:background="@drawable/phone_code_selected_bg">
+
+                <ImageView
+                    android:id="@+id/ivSun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_sun_ping"
+                    app:tint="@color/colorRegisterButtonPrimary"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlVolume"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_46sdp"
+                android:layout_toEndOf="@+id/rlSun"
+                android:background="@drawable/phone_code_selected_bg">
+
+                <ImageView
+                    android:id="@+id/ivVolume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_volume_up_ping"
+                    app:tint="@color/colorRegisterButtonPrimary"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvStartPing"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_46sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_22sdp"
+        android:background="@drawable/ic_button_bg"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:stateListAnimator="@null"
+        android:text="Start"
+        android:textAllCaps="false"
+        android:textColor="@color/colorNero"
+        android:textSize="@dimen/_14sdp" />
+</RelativeLayout>

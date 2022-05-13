@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/colorNavigationKilometer" />
+    <corners android:radius="@dimen/_24sdp" />
+    <padding
+        android:left="@dimen/_15sdp"
+        android:right="@dimen/_15sdp" />
+    <stroke
+        android:width="@dimen/_1sdp"
+        android:color="@color/colorMessageDisable" />
+</shape>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/colorWhite" />
+                    <padding android:left="@dimen/_15sdp" android:right="@dimen/_15sdp" />
+                    <corners android:radius="@dimen/_4sdp" />
+                    <stroke android:width="@dimen/_1sdp" android:color="@color/colorDarkGray" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_focused="false">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/colorNavigationKilometer" />
+                    <corners android:radius="@dimen/_24sdp" />
+                    <padding android:left="@dimen/_15sdp" android:right="@dimen/_15sdp" />
+                    <stroke android:width="@dimen/_1sdp" android:color="@color/colorMessageDisable" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>-->

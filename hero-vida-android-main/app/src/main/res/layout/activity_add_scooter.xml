@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/llMain"
+    android:background="@drawable/ic_main_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.register.AddScooterActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_56sdp"
+        android:background="@color/colorWhite"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgBackArrow"
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_56sdp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_20sdp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_minus8sdp"
+            android:layout_toEndOf="@id/imgBackArrow"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:text="Add My Another Scooter"
+            android:textColor="@color/colorNero"
+            android:textSize="@dimen/_16sdp" />
+
+        <TextView
+            android:id="@+id/tvRangeHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_marginStart="@dimen/_minus8sdp"
+            android:layout_marginEnd="16dp"
+            android:layout_toEndOf="@id/imgBackArrow"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="start"
+            android:includeFontPadding="false"
+            android:text="@string/vehicle_identification_number"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/_10sdp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvAddVehicle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/poppins_medium"
+        android:includeFontPadding="false"
+        android:text="@string/add_your_vehicle"
+        android:visibility="visible"
+        android:textColor="@color/colorNero"
+        android:textSize="@dimen/_15sdp" />
+
+    <TextView
+        android:id="@+id/tvIdentifyNumber"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="start"
+        android:includeFontPadding="false"
+        android:text="@string/vehicle_identification_number"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/tvVIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins_medium"
+        android:includeFontPadding="false"
+        android:text="@string/enter_VIN_number"
+        android:textColor="@color/colorDarkGray"
+        android:textSize="@dimen/_11sdp" />
+
+    <EditText
+        android:id="@+id/etVINNumber"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="no"
+        android:background="@drawable/edittext_button_gray_shape"
+        android:ems="10"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="@string/enter_VIN_number"
+        android:includeFontPadding="false"
+        android:inputType="textPassword"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:text=""
+        android:textSize="@dimen/_12sdp" />
+
+
+    <TextView
+        android:id="@+id/tvQRCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins_medium"
+        android:includeFontPadding="false"
+        android:text="@string/or_scan_qr_code"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/_11sdp" />
+
+    <ImageView
+        android:id="@+id/ivScanQRCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/app_name"
+        android:elevation="@dimen/_5sdp"
+        app:srcCompat="@drawable/ic_scan_qrcode" />
+
+    <TextView
+        android:id="@+id/tvFindVINNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:text="@string/find_the_vin_number_qr_code"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/_11sdp" />
+
+    <TextView
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_46sdp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_button_bg"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:stateListAnimator="@null"
+        android:text="@string/add"
+        android:textAllCaps="false"
+        android:textColor="@color/colorNero"
+        android:textSize="@dimen/_12sdp" />
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:state_focused="false">
+        <layer-list>
+            <item>
+                <shape>
+                    <gradient android:angle="270" android:endColor="#fff" android:startColor="#fff" />
+                    <stroke android:width="@dimen/_1sdp" android:color="@color/colorInputGray" />
+                    <corners android:radius="@dimen/_24sdp" />
+                    <padding android:bottom="8dp" android:left="2dp" android:right="8dp" android:top="8dp" />
+                </shape>
+            </item>
+
+
+            <item android:height="8dp" android:drawable="@drawable/ic_dropdown" android:gravity="end|center_vertical" android:right="14dp" android:top="2dp" />
+        </layer-list>
+    </item>
+
+    <item android:state_enabled="false" android:state_focused="true" android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape>
+                    <gradient android:angle="270" android:endColor="#fff" android:startColor="#fff" />
+                    <stroke android:width="@dimen/_1sdp" android:color="@color/colorInputGray" />
+                    <corners android:radius="@dimen/_24sdp" />
+                    <padding android:bottom="8dp" android:left="2dp" android:right="8dp" android:top="8dp" />
+                </shape>
+            </item>
+
+
+            <item android:height="8dp" android:drawable="@drawable/ic_arrowup" android:gravity="end|center_vertical" android:right="14dp" android:top="2dp" />
+        </layer-list>
+    </item>
+</selector>

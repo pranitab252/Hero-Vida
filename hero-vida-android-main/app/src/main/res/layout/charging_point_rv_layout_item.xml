@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        app:srcCompat="@drawable/ic_location"
+        app:tint="@color/colorNero" />
+
+    <LinearLayout
+        android:id="@+id/llChargingPointDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:layout_toEndOf="@id/ivLocation"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvChargingPointHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:text="WeWork 247 Park"
+            android:textColor="@color/colorSolidGray"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/tvChargingPointDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:includeFontPadding="false"
+            android:text="13th floor, Bus Stop, 247 Park, Lal Bahadur Shastri..."
+            android:textColor="@color/colorDarkGray"
+            android:textSize="@dimen/_12sdp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_below="@id/llChargingPointDetail"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:background="@color/colorUnSelectSeek" />
+</RelativeLayout>

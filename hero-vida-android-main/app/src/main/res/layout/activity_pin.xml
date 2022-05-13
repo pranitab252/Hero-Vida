@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_main_bg"
+    tools:context=".ui.register.PinActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_16sdp">
+
+        <TextView
+            android:id="@+id/tv_pinHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:fontFamily="@font/poppins_extrabold"
+            android:text="Hello Ram!"
+            android:textColor="@color/colorNero"
+            android:textSize="@dimen/_24sdp" />
+
+        <TextView
+            android:id="@+id/tv_welcomeVida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_pinHeading"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_minus6sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/welcome_to_vida"
+            android:textColor="@color/colorNero"
+            android:textSize="@dimen/_18sdp" />
+
+        <TextView
+            android:id="@+id/tv_loginFaceId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_welcomeVida"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_26sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/login_with_face_id"
+            android:textColor="@color/colorNero"
+            android:textSize="@dimen/_12sdp" />
+
+        <ImageView
+            android:id="@+id/img_faceId"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_below="@id/tv_loginFaceId"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/face_id" />
+
+        <TextView
+            android:id="@+id/tv_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_faceId"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/or"
+            android:textColor="@color/colorNero"
+            android:textSize="@dimen/_12sdp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_enterPin"
+            android:layout_width="@dimen/_190sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_or"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_18sdp">
+
+            <TextView
+                android:id="@+id/tv_enterFourDigit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/enter_4_digit_pin"
+                android:textColor="@color/colorDarkGray"
+                android:textSize="@dimen/_12sdp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_enterFourDigit"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:gravity="center_horizontal">
+
+                <EditText
+                    android:id="@+id/et_first_digit"
+                    style="@style/mediumTextStyle"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:autofillHints="no"
+                    android:background="@drawable/phone_code_state"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:includeFontPadding="false"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_14sdp" />
+
+                <EditText
+                    android:id="@+id/et_second_digit"
+                    style="@style/mediumTextStyle"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/et_first_digit"
+                    android:autofillHints="no"
+                    android:background="@drawable/phone_code_state"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:includeFontPadding="false"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_14sdp" />
+
+                <EditText
+                    android:id="@+id/et_third_digit"
+                    style="@style/mediumTextStyle"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/et_second_digit"
+                    android:autofillHints="no"
+                    android:background="@drawable/phone_code_state"
+                    android:gravity="center"
+                    android:imeOptions="actionNext"
+                    android:includeFontPadding="false"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_14sdp" />
+
+                <EditText
+                    android:id="@+id/et_fourth_digit"
+                    style="@style/mediumTextStyle"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_toEndOf="@id/et_third_digit"
+                    android:autofillHints="no"
+                    android:background="@drawable/phone_code_state"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_14sdp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_wrongPin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_field"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/wrong_pin"
+                android:textColor="@color/colorPinError"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_forgotPin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_field"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/forgot_pin"
+                android:textColor="@color/colorSolidHover"
+                android:textSize="@dimen/_12sdp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_pinVerify"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_46sdp"
+            android:layout_below="@id/rl_enterPin"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/button_unselect_bg"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:stateListAnimator="@null"
+            android:text="@string/pin"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_14sdp"
+            app:cornerRadius="@dimen/_24sdp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_registerNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/img_vidaBlack"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tv_newToVida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/new_to_vida"
+                android:textColor="@color/colorNero"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/tv_registerNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_toEndOf="@+id/tv_newToVida"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/register_now"
+                android:textColor="@color/colorSolidHover"
+                android:textSize="@dimen/_12sdp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_vidaBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/ic_vida_logo_black" />
+    </RelativeLayout>
+</LinearLayout>

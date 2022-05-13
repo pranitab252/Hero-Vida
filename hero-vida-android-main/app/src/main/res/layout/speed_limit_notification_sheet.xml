@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_13sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:text="Speed Limit"
+            android:textColor="@color/colorNero"
+            android:textSize="@dimen/_16sdp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/scSpeedLimitSheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_minus8sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:thumb="@drawable/thumb_selector"
+            app:track="@drawable/track_selector" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:includeFontPadding="false"
+        android:text="km/hr"
+        android:textColor="@color/colorDarkGray"
+        android:textSize="@dimen/_12sdp" />
+
+    <com.warkiz.widget.IndicatorSeekBar
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        app:isb_indicator_color="@color/colorPrimary"
+        app:isb_indicator_text_color="@color/colorBlack"
+        app:isb_indicator_text_size="18sp"
+        app:isb_max="100"
+        app:isb_progress="25"
+        app:isb_show_indicator="rounded_rectangle"
+        app:isb_thumb_color="@color/colorRegisterButtonPrimary"
+        app:isb_thumb_size="@dimen/_16sdp"
+        app:isb_tick_marks_size="13dp"
+        app:isb_tick_texts_color="@color/colorBlack"
+        app:isb_tick_texts_size="@dimen/_14sdp"
+        app:isb_ticks_count="2"
+        app:isb_track_background_color="@color/colorUnSelectSeek"
+        app:isb_track_background_size="@dimen/_4sdp"
+        app:isb_track_progress_color="@color/colorSolidHover"
+        app:isb_track_progress_size="@dimen/_4sdp"
+        app:isb_track_rounded_corners="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:text="100"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/_12sdp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ll_sub_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_18sdp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:id="@+id/tvBack"
+            style="@style/mediumTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_46sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_weight="5"
+            android:background="@drawable/radius_bg"
+            android:backgroundTint="@color/colorNero"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:text="Back"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tvSet"
+            style="@style/mediumTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_46sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_weight="5"
+            android:background="@drawable/radius_bg"
+            android:backgroundTint="@color/colorRegisterButtonPrimary"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:text="Set"
+            android:textColor="@color/colorNero"
+            android:textSize="@dimen/_12sdp" />
+    </LinearLayout>
+</LinearLayout>

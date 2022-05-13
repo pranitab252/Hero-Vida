@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.dashboard.ChangeSecurityPinActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_56sdp"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/imgBackArrow"
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_56sdp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_20sdp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_minus8sdp"
+            android:layout_toEndOf="@id/imgBackArrow"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:text="Change PIN"
+            android:textColor="@color/colorNero"
+            android:textSize="@dimen/_16sdp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvEnterCurrentPIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Enter current PIN"
+        android:textColor="@color/colorDarkGray"
+        android:textSize="@dimen/_10sdp" />
+
+    <RelativeLayout
+        android:id="@+id/rlCurrentPasswordField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_6sdp">
+
+        <EditText
+            android:id="@+id/et_current_first_digit"
+            style="@style/mediumTextStyle"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/radius_bg"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:maxLength="1"
+            android:singleLine="true"
+            android:textSize="@dimen/_14sdp" />
+
+        <EditText
+            android:id="@+id/et_current_second_digit"
+            style="@style/mediumTextStyle"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@id/et_current_first_digit"
+            android:background="@drawable/radius_bg"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:maxLength="1"
+            android:singleLine="true"
+            android:textSize="@dimen/_14sdp" />
+
+        <EditText
+            android:id="@+id/et_current_third_digit"
+            style="@style/mediumTextStyle"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@id/et_current_second_digit"
+            android:background="@drawable/radius_bg"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:maxLength="1"
+            android:singleLine="true"
+            android:textSize="@dimen/_14sdp" />
+
+        <EditText
+            android:id="@+id/et_current_fourth_digit"
+            style="@style/mediumTextStyle"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_toEndOf="@id/et_current_third_digit"
+            android:background="@drawable/radius_bg"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:maxLength="1"
+            android:singleLine="true"
+            android:textSize="@dimen/_14sdp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvSetPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Set new PIN"
+        android:textColor="@color/colorDarkGray"
+        android:textSize="@dimen/_10sdp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_6sdp">
+
+        <EditText
+            android:id="@+id/et_first_digit"
+            style="@style/mediumTextStyle"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/radius_bg"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:maxLength="1"
+            android:singleLine="true"
+            android:textSize="@dimen/_14sdp" />
+
+        <EditText
+            android:id="@+id/et_second_digit"
+            style="@style/mediumTextStyle"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@id/et_first_digit"
+            android:background="@drawable/radius_bg"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:maxLength="1"
+            android:singleLine="true"
+            android:textSize="@dimen/_14sdp" />
+
+        <EditText
+            android:id="@+id/et_third_digit"
+            style="@style/mediumTextStyle"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@id/et_second_digit"
+            android:background="@drawable/radius_bg"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:maxLength="1"
+            android:singleLine="true"
+            android:textSize="@dimen/_14sdp" />
+
+        <EditText
+            android:id="@+id/et_fourth_digit"
+            style="@style/mediumTextStyle"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_toEndOf="@id/et_third_digit"
+            android:background="@drawable/radius_bg"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:maxLength="1"
+            android:singleLine="true"
+            android:textSize="@dimen/_14sdp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvConformPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Confirm New Quick Access PIN"
+        android:textColor="@color/colorDarkGray"
+        android:textSize="@dimen/_10sdp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_fieldConform"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_6sdp">
+
+        <EditText
+            android:id="@+id/et_first_digit_conform"
+            style="@style/mediumTextStyle"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/radius_bg"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:maxLength="1"
+            android:singleLine="true"
+            android:textSize="@dimen/_14sdp" />
+
+        <EditText
+            android:id="@+id/et_second_digit_conform"
+            style="@style/mediumTextStyle"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@id/et_first_digit_conform"
+            android:background="@drawable/radius_bg"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:maxLength="1"
+            android:singleLine="true"
+            android:textSize="@dimen/_14sdp" />
+
+        <EditText
+            android:id="@+id/et_third_digit_conform"
+            style="@style/mediumTextStyle"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toEndOf="@id/et_second_digit_conform"
+            android:background="@drawable/radius_bg"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:maxLength="1"
+            android:singleLine="true"
+            android:textSize="@dimen/_14sdp" />
+
+        <EditText
+            android:id="@+id/et_fourth_digit_conform"
+            style="@style/mediumTextStyle"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_toEndOf="@id/et_third_digit_conform"
+            android:background="@drawable/radius_bg"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:maxLength="1"
+            android:singleLine="true"
+            android:textSize="@dimen/_14sdp" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tvPinDontMatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:includeFontPadding="false"
+        android:text="Pin doesn’t match!"
+        android:textColor="@color/colorOTPErrror"
+        android:textSize="@dimen/_13sdp"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/tv_continue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_46sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/button_unselect_bg"
+        android:backgroundTint="@color/colorRegisterButtonPrimary"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:stateListAnimator="@null"
+        android:text="@string/conform_continue"
+        android:textAllCaps="false"
+        android:textColor="@color/colorNero"
+        android:textSize="@dimen/_14sdp" />
+</LinearLayout>

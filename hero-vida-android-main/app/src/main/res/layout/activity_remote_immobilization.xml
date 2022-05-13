@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical"
+    tools:context=".ui.quickcontrol.RemoteImmobilizationActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_56sdp"
+        android:layout_marginTop="@dimen/_22sdp">
+
+        <ImageView
+            android:id="@+id/imgBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_22sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_toEndOf="@id/imgBackArrow"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:text="@string/remote_immobilization"
+            android:textColor="@color/colorNero"
+            android:textSize="@dimen/_16sdp" />
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_61sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/llScooterLocation" />
+
+
+            <RelativeLayout
+                android:id="@+id/rlCurrentLocation"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_above="@+id/llScooterLocation"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:layout_marginBottom="@dimen/_18sdp"
+                android:background="@drawable/circle_bg"
+                android:backgroundTint="@color/colorNero">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/ic_gps_current"
+                    app:tint="@color/colorWhite" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/llScooterLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorWhite"
+                android:padding="@dimen/_16sdp">
+
+                <LinearLayout
+                    android:id="@+id/llShareSctooerLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:includeFontPadding="false"
+                        android:text="Send your scooter location"
+                        android:textColor="@color/colorNero"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/llCurrentLocation"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_76sdp"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/share_location_bg"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgCurrentLocation"
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:src="@drawable/ic_location_un_select" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_6sdp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="Current Location"
+                                android:textColor="@color/colorNero"
+                                android:textSize="@dimen/_10sdp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llShareLiveLocation"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_76sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/share_location_bg"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgShareLiveLocation"
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:src="@drawable/ic_live_un_select" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_6sdp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="Share Live Location"
+                                android:textColor="@color/colorNero"
+                                android:textSize="@dimen/_10sdp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llLocationShareSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="Set sharing time limit"
+                            android:textColor="@color/colorDarkGray"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.warkiz.widget.IndicatorSeekBar
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_minus10sdp"
+                            android:layout_marginTop="@dimen/_40sdp"
+                            android:layout_marginEnd="@dimen/_minus9sdp"
+                            app:isb_indicator_color="@color/colorPrimary"
+                            app:isb_indicator_text_color="@color/colorBlack"
+                            app:isb_indicator_text_size="18sp"
+                            app:isb_max="100"
+                            app:isb_progress="25"
+                            app:isb_show_indicator="rounded_rectangle"
+                            app:isb_thumb_color="@color/colorRegisterButtonPrimary"
+                            app:isb_thumb_size="@dimen/_16sdp"
+                            app:isb_tick_marks_size="13dp"
+                            app:isb_tick_texts_color="@color/colorBlack"
+                            app:isb_tick_texts_size="@dimen/_14sdp"
+                            app:isb_ticks_count="2"
+                            app:isb_track_background_color="@color/colorUnSelectSeek"
+                            app:isb_track_background_size="@dimen/_4sdp"
+                            app:isb_track_progress_color="@color/colorSolidHover"
+                            app:isb_track_progress_size="@dimen/_4sdp"
+                            app:isb_track_rounded_corners="true" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="5 mins"
+                                android:textColor="@color/colorGray"
+                                android:textSize="@dimen/_14sdp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="8 hrs"
+                                android:textColor="@color/colorGray"
+                                android:textSize="@dimen/_14sdp" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvShareLiveLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_46sdp"
+                            android:layout_marginTop="@dimen/_18sdp"
+                            android:background="@drawable/ic_button_bg"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="Share"
+                            android:textColor="@color/colorNero"
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llImmobilization"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="Current Scooter \nLocation"
+                            android:textColor="@color/colorPrimary_2"
+                            android:textSize="@dimen/_16sdp" />
+
+                        <!--TODO: hide if not ready-->
+                        <RelativeLayout
+                            android:id="@+id/rlCircleShare"
+                            android:layout_width="@dimen/_36sdp"
+                            android:layout_height="@dimen/_36sdp"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/circle_bg"
+                            android:backgroundTint="@color/colorNero"
+                            android:visibility="invisible"
+                            tools:visibility="visible">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/ic_share"
+                                app:tint="@color/colorWhite" />
+                        </RelativeLayout>
+
+                        <!--TODO: hide if not ready-->
+                        <RelativeLayout
+                            android:id="@+id/rlCircleNavigation"
+                            android:layout_width="@dimen/_36sdp"
+                            android:layout_height="@dimen/_36sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_toStartOf="@id/rlCircleShare"
+                            android:background="@drawable/circle_bg"
+                            android:backgroundTint="@color/colorNero"
+                            android:visibility="invisible"
+                            tools:visibility="visible">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/ic_navigation"
+                                app:tint="@color/colorWhite" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:drawableTint="@color/colorNero"
+                        android:fontFamily="@font/poppins_medium"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/colorKilamanjaro"
+                        android:textSize="@dimen/_14sdp"
+                        app:drawableStartCompat="@drawable/ic_location"
+                        tools:text="Gandhi Nagar, Mumbai" />
+
+                    <!--TODO: hide if not ready-->
+                    <TextView
+                        android:id="@+id/tv_location_eta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_14sdp"
+                        tools:text="21 min (1.2 km)" />
+
+                    <TextView
+                        android:id="@+id/tvConformImmobilization"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_46sdp"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:background="@drawable/ic_button_bg"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="Immobilize Scooter"
+                        android:textColor="@color/colorNero"
+                        android:textSize="@dimen/_14sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTrackMyScooter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:id="@+id/llTrackShare"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_46sdp"
+                        android:layout_weight="5"
+                        android:background="@drawable/radius_bg"
+                        android:backgroundTint="@color/colorNero"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:src="@drawable/ic_share"
+                            app:tint="@color/colorWhite" />
+
+                        <TextView
+                            style="@style/mediumTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="0dp"
+                            android:text="Share"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llTrackNavigate"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_46sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_weight="5"
+                        android:background="@drawable/radius_bg"
+                        android:backgroundTint="@color/colorRegisterButtonPrimary"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:src="@drawable/ic_navigation"
+                            app:tint="@color/colorNero" />
+
+                        <EditText
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_10sdp"
+                            android:id="@+id/lat"/>
+
+                        <EditText
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_10sdp"
+                            android:id="@+id/longi"/>
+
+
+                        <TextView
+                            style="@style/mediumTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="0dp"
+                            android:text="Navigate"
+                            android:textColor="@color/colorNero"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llExitTrack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:includeFontPadding="false"
+                        android:text="Reaching your Scooter"
+                        android:textColor="@color/colorPrimary_2"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_24sdp">
+
+                        <TextView
+                            android:id="@+id/tvNavigationTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:includeFontPadding="false"
+                            android:text="20 mins"
+                            android:textColor="@color/colorNavigationColor"
+                            android:textSize="@dimen/_24sdp" />
+
+                        <TextView
+                            android:id="@+id/tvKilometer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvNavigationTime"
+                            android:layout_marginTop="@dimen/_1sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:includeFontPadding="false"
+                            android:text="1.2 km"
+                            android:textColor="@color/colorkilometer"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <TextView
+                            android:id="@+id/tvCurrentTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvNavigationTime"
+                            android:layout_marginStart="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_1sdp"
+                            android:layout_marginBottom="@dimen/_16sdp"
+                            android:layout_toEndOf="@+id/tvKilometer"
+                            android:fontFamily="@font/poppins_regular"
+                            android:includeFontPadding="false"
+                            android:text="18:23"
+                            android:textColor="@color/colorkilometer"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlExitNavigation"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_46sdp"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/radius_bg"
+                            android:backgroundTint="@color/colorRegisterButtonPrimary">
+
+                            <TextView
+                                android:id="@+id/tvExit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/poppins_regular"
+                                android:includeFontPadding="false"
+                                android:text="Exit"
+                                android:textColor="@color/colorNero"
+                                android:textSize="@dimen/_14sdp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_46sdp"
+                            android:layout_height="@dimen/_46sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_toStartOf="@+id/rlExitNavigation"
+                            android:background="@drawable/circle_bg">
+
+                            <ImageView
+                                android:layout_width="@dimen/_23sdp"
+                                android:layout_height="@dimen/_23sdp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/ic_path" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

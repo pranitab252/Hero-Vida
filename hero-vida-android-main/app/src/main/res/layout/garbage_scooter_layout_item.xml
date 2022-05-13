@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_234sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:background="@drawable/toast_white_rounded">
+
+        <TextView
+            android:id="@+id/tvGabageScooterModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:fontFamily="@font/poppins_semibold"
+            android:includeFontPadding="false"
+            android:text="TN 01 AB 0001"
+            android:textColor="@color/colorNero"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tvGabageScooterActive"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:background="@drawable/radius_bg"
+            android:backgroundTint="@color/colorActiveBg"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="Active"
+            android:textColor="@color/colorAvailable"
+            android:textSize="@dimen/_10sdp" />
+
+        <ImageView
+            android:id="@+id/ivGarbageScooter"
+            android:layout_width="@dimen/_226sdp"
+            android:layout_height="@dimen/_132sdp"
+            android:layout_below="@id/tvGabageScooterModel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:srcCompat="@drawable/my_garbage_1" />
+
+        <TextView
+            android:id="@+id/tvSetAsDefault"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@id/ivGarbageScooter"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/radius_bg"
+            android:backgroundTint="@color/colorNero"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="Set as default scooter"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="visible" />
+    </RelativeLayout>
+</LinearLayout>

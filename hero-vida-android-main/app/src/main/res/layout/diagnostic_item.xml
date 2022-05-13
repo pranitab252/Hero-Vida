@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_16sdp">
+
+    <ImageView
+        android:id="@+id/ivIssues"
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:contentDescription="issues"
+        android:paddingBottom="@dimen/_2sdp"
+        app:srcCompat="@drawable/ic_issues" />
+
+    <LinearLayout
+        android:id="@+id/llDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_toEndOf="@id/ivIssues"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvDiagnosticHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="Head Light"
+            android:textColor="@color/colorNero" />
+
+        <TextView
+            android:id="@+id/tvDiagnosticContnet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="@dimen/_10sdp"
+            android:text="LED bulb of the hedlight isn’t working. Replace of LED bulb required."
+            android:textColor="@color/colorDarkGray"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vDivider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_below="@id/llDetail"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:background="@color/colorUnSelectSeek"
+        android:visibility="gone" />
+</RelativeLayout>

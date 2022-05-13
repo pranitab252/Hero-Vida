@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/garbage_navigation"
+    app:startDestination="@id/navigation_all_scooter">
+    <fragment
+        android:id="@+id/navigation_all_scooter"
+        android:name="com.example.vida.ui.dashboard.fragment.AllScooterFragment"
+        android:label="All Scooter"
+        tools:layout="@layout/fragment_all_scooter" />
+    <fragment
+        android:id="@+id/navigation_manage_users"
+        android:name="com.example.vida.ui.dashboard.fragment.ManageUsersFragment"
+        android:label="Manage Users"
+        tools:layout="@layout/fragment_manage_users" />
+</navigation>
